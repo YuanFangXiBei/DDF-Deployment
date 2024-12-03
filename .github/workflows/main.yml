@@ -17,13 +17,34 @@ jobs:
         terraform_version: 1.4.0
 
     - name: Terraform Init
+      env:
+        TF_VAR_resource_group_name: "my-resource-group"   # 替换为你的资源组名称
+        TF_VAR_location: "eastus"                        # 替换为你的 Azure 位置
+        TF_VAR_api_management_name: "my-api-management"  # 替换为你的 API Management 名称
+        TF_VAR_publisher_email: "admin@example.com"      # 替换为你的发布者邮箱
+        TF_VAR_publisher_name: "My Company"              # 替换为你的发布者名称
+        TF_VAR_sku_name: "Developer_1"                   # 添加 sku_name 变量
       run: terraform init
       working-directory: ./terraform
 
     - name: Terraform Plan
+      env:
+        TF_VAR_resource_group_name: "my-resource-group"   # 替换为你的资源组名称
+        TF_VAR_location: "eastus"                        # 替换为你的 Azure 位置
+        TF_VAR_api_management_name: "my-api-management"  # 替换为你的 API Management 名称
+        TF_VAR_publisher_email: "admin@example.com"      # 替换为你的发布者邮箱
+        TF_VAR_publisher_name: "My Company"              # 替换为你的发布者名称
+        TF_VAR_sku_name: "Developer_1"                   # 添加 sku_name 变量
       run: terraform plan
       working-directory: ./terraform
 
     - name: Terraform Apply
+      env:
+        TF_VAR_resource_group_name: "my-resource-group"   # 替换为你的资源组名称
+        TF_VAR_location: "eastus"                        # 替换为你的 Azure 位置
+        TF_VAR_api_management_name: "my-api-management"  # 替换为你的 API Management 名称
+        TF_VAR_publisher_email: "admin@example.com"      # 替换为你的发布者邮箱
+        TF_VAR_publisher_name: "My Company"              # 替换为你的发布者名称
+        TF_VAR_sku_name: "Developer_1"                   # 添加 sku_name 变量
       run: terraform apply -auto-approve
       working-directory: ./terraform

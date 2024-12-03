@@ -1,0 +1,5 @@
+resource_group_name = "new-resource-group"
+location            = "westeurope"
+api_management_name = "new-api-management"
+publisher_email     = "new-email@example.com"
+publisher_name      = "New Publisher Name"

@@ -20,4 +20,3 @@ resource "azurerm_api_management" "apim" {
   publisher_name      = var.publisher_name
   sku_name            = var.sku_name
 }
-

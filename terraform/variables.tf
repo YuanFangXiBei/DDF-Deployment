@@ -1,12 +1,19 @@
-resource "azurerm_resource_group" "rg" {
-  name     = var.resource_group_name
-  location = var.location
+variable "resource_group_name" {
+  description = "Name of the resource group"
 }
 
-resource "azurerm_api_management" "apim" {
-  name                = var.api_management_name
-  location            = var.location
-  resource_group_name = azurerm_resource_group.rg.name
-  publisher_email     = var.publisher_email
-  publisher_name      = var.publisher_name
+variable "location" {
+  description = "Azure region for the resources"
+}
+
+variable "api_management_name" {
+  description = "Name of the API Management service"
+}
+
+variable "publisher_email" {
+  description = "Email of the API Management publisher"
+}
+
+variable "publisher_name" {
+  description = "Name of the API Management publisher"
 }

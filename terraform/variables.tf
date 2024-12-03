@@ -17,3 +17,7 @@ variable "publisher_email" {
 variable "publisher_name" {
   description = "Name of the API Management publisher"
 }
+variable "sku_name" {
+  description = "SKU name for the API Management service"
+  default     = "Developer_1"
+}

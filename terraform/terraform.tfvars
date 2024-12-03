@@ -1,10 +1,8 @@
-resource_group_name = "new-resource-group"
-location            = "westeurope"
-api_management_name = "new-api-management"
-publisher_email     = "new-email@example.com"
-publisher_name      = "New Publisher Name"
-variable "sku_name" {
-  description = "SKU name for the API Management service"
-  default     = "Developer_1"  # 设置一个默认值
-}
+resource_group_name = "my-resource-group"
+location            = "eastus"
+api_management_name = "my-api-management"
+publisher_email     = "admin@example.com"
+publisher_name      = "My Company"
+sku_name            = "Developer_1"
+
 
